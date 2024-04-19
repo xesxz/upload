@@ -33,11 +33,11 @@ router.post("/upload", async (ctx) => {
   console.log("filePath: ", file.filepath); // 上传文件的新路径
   console.log("originalFilename: ", file.newFilename); // 上传文件的新名称
   console.log("newFilename: ", file.originalFilename); // 上传文件的原始名称
-
+  const url = `/uploads/${file.newFilename}`;
   ctx.body = {
     code: 0,
     message: "文件上传成功",
-    data: { url: file.filepath },
+    data: { url: url },
   };
 });
 
