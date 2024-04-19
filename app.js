@@ -6,7 +6,9 @@ const static = require("koa-static");
 const { koaBody } = require("koa-body");
 
 
-app.use(static(__dirname + "/uploads"));
+app.use(static(__dirname + "/uploads"),{
+  maxage: 24 * 60 * 60 * 1000 // 1 day
+});
 
 
 
