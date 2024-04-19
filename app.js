@@ -22,9 +22,9 @@ app.use(
 );
 
 
-router.get("/", async (ctx) => {
-  ctx.body = "Hello World!";
-})
+// router.get("/", async (ctx) => {
+//   ctx.body = "Hello World!";
+// })
 
 // 设置路由处理函数
 router.post("/upload", async (ctx) => {
