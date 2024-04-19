@@ -37,7 +37,7 @@ router.post("/upload", async (ctx) => {
   ctx.body = {
     code: 0,
     message: "文件上传成功",
-    data: { url: file.filepath },
+    data: { url: file.newFilename },
   };
 });
 
